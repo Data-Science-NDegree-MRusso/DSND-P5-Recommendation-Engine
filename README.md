@@ -6,7 +6,7 @@ This Project is submitted as part of the Udacity Data Science Nanodegree.
 For it the target is to analyze the interactions that users have with articles on the IBM Watson Studio platform, and make recommendations to them about new articles you think they will like. Below you can see an example of what the dashboard could look like displaying articles on the IBM Watson Platform:
 
 <p align="center">
-  <img width="460" height="350" src="./pictures/FinalScreenshotN100.png">
+  <img width="460" height="350" src="./pictures/screenshot-watson.png">
 </p>
 
 ## License
