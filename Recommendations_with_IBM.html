@@ -14260,7 +14260,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Recommendations-with-IBM">Recommendations with IBM<a class="anchor-link" href="#Recommendations-with-IBM">&#182;</a></h1><p>In this notebook, we will see different examples of implementations of recommendation engines, that will be using  real data from the IBM Watson Studio platform.</p>
-<p>Different methods for making recommendations that can be used for different situations will be shown according to the following:</p>
+<p>Different methods for making recommendations that can be used for different situations will be shown and commented in the following sections.</p>
 <h2 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h2><p>I. <a href="#Exploratory-Data-Analysis">Exploratory Data Analysis</a><br>
 II. <a href="#Rank">Rank Based Recommendations</a><br>
 III. <a href="#User-User">User-User Based Collaborative Filtering</a><br>
@@ -15721,6 +15721,50 @@ dtype: float64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Take a look at an example:</span>
+<span class="n">get_top_articles</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;use deep learning for image classification&#39;,
+ &#39;insights from new york car accident reports&#39;,
+ &#39;visualize car data with brunel&#39;,
+ &#39;use xgboost, scikit-learn &amp; ibm watson machine learning apis&#39;,
+ &#39;predicting churn with the spss random tree algorithm&#39;,
+ &#39;healthcare python streaming application demo&#39;,
+ &#39;finding optimal locations of new store using decision optimization&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Test your function by returning the top 5, 10, and 20 articles</span>
 <span class="n">top_5</span> <span class="o">=</span> <span class="n">get_top_articles</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">top_10</span> <span class="o">=</span> <span class="n">get_top_articles</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -15786,7 +15830,7 @@ Your top_20 looks like the solution list! Nice job.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create the user-article matrix with 1&#39;s and 0&#39;s</span>
@@ -15820,7 +15864,7 @@ Your top_20 looks like the solution list! Nice job.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Call the create_user_item_matrix function</span>
@@ -15835,7 +15879,7 @@ Your top_20 looks like the solution list! Nice job.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show the user_item matrix</span>
@@ -15855,7 +15899,7 @@ Your top_20 looks like the solution list! Nice job.
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
 
 
 
@@ -16061,7 +16105,7 @@ Your top_20 looks like the solution list! Nice job.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Tests: You should just need to run this cell.  Don&#39;t change the code.</span>
@@ -16106,7 +16150,7 @@ Your top_20 looks like the solution list! Nice job.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># user_item.to_pickle(&#39;./data/user_item_matrix.p&#39;)</span>
@@ -16134,7 +16178,7 @@ Your top_20 looks like the solution list! Nice job.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Implementation using dot product</span>
@@ -16181,7 +16225,7 @@ Your top_20 looks like the solution list! Nice job.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Implementation using cosine similarity</span>
@@ -16228,7 +16272,7 @@ Your top_20 looks like the solution list! Nice job.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Do a spot check of your function</span>
@@ -16276,7 +16320,7 @@ Their similarities are: [40, 26, 26]
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Do a spot check of your function</span>
@@ -16339,7 +16383,7 @@ Their similarities are: [1.000, 0.381, 0.363]
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_article_names</span><span class="p">(</span><span class="n">article_ids</span><span class="p">,</span> <span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">):</span>
@@ -16446,7 +16490,7 @@ Their similarities are: [1.000, 0.381, 0.363]
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Test your functions here - No need to change this code - just run this cell</span>
@@ -16488,7 +16532,7 @@ Their similarities are: [1.000, 0.381, 0.363]
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check Results</span>
@@ -16508,7 +16552,7 @@ Their similarities are: [1.000, 0.381, 0.363]
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
 
 
 
@@ -16553,7 +16597,7 @@ Their similarities are: [1.000, 0.381, 0.363]
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_top_sorted_users</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">user_item</span><span class="o">=</span><span class="n">user_item</span><span class="p">):</span>
@@ -16665,7 +16709,7 @@ Their similarities are: [1.000, 0.381, 0.363]
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Quick spot check - don&#39;t change this code - just use it to test your functions</span>
@@ -16722,7 +16766,7 @@ The top 10 recommendations for user 20 are the following article names:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Tests with a dictionary of results</span>
@@ -16748,7 +16792,7 @@ The top 10 recommendations for user 20 are the following article names:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
 
 
 
@@ -16766,7 +16810,7 @@ The top 10 recommendations for user 20 are the following article names:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Dictionary Test Here</span>
@@ -16832,7 +16876,7 @@ For this reason the best option amongst the available ones would be <strong>rank
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_user</span> <span class="o">=</span> <span class="s1">&#39;0.0&#39;</span>
@@ -16850,7 +16894,7 @@ For this reason the best option amongst the available ones would be <strong>rank
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">new_user_recs</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;1314.0&#39;</span><span class="p">,</span><span class="s1">&#39;1429.0&#39;</span><span class="p">,</span><span class="s1">&#39;1293.0&#39;</span><span class="p">,</span><span class="s1">&#39;1427.0&#39;</span><span class="p">,</span><span class="s1">&#39;1162.0&#39;</span><span class="p">,</span><span class="s1">&#39;1364.0&#39;</span><span class="p">,</span><span class="s1">&#39;1304.0&#39;</span><span class="p">,</span><span class="s1">&#39;1170.0&#39;</span><span class="p">,</span><span class="s1">&#39;1431.0&#39;</span><span class="p">,</span><span class="s1">&#39;1330.0&#39;</span><span class="p">]),</span> <span class="s2">&quot;Oops!  It makes sense that in this case we would want to recommend the most popular articles, because we don&#39;t know anything about these users.&quot;</span>
@@ -16907,7 +16951,7 @@ For this reason the best option amongst the available ones would be <strong>rank
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Tokenizer function</span>
@@ -16954,7 +16998,7 @@ For this reason the best option amongst the available ones would be <strong>rank
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Build corpus of descriptions</span>
@@ -17011,7 +17055,7 @@ NAN found at index =  919
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Initialize tf-idf vectorizer object</span>
@@ -17033,1044 +17077,22 @@ NAN found at index =  919
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We can take a look at the vocabulary created:</p>
+<p>If we want, we can take a look at the vocabulary created:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Uncomment to look at the vocabulary</span>
+<span class="c1"># vectorizer.vocabulary_</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;detect&#39;: 427,
- &#39;malfunctioning&#39;: 918,
- &#39;iot&#39;: 798,
- &#39;sensor&#39;: 1342,
- &#39;streaming&#39;: 1438,
- &#39;analytics&#39;: 97,
- &#39;communicating&#39;: 312,
- &#39;data&#39;: 389,
- &#39;science&#39;: 1314,
- &#39;guide&#39;: 685,
- &#39;presenting&#39;: 1156,
- &#39;work&#39;: 1630,
- &#39;week&#39;: 1617,
- &#39;april&#39;: 118,
- &#39;18&#39;: 16,
- &#39;2017&#39;: 22,
- &#39;datalayer&#39;: 391,
- &#39;conference&#39;: 323,
- &#39;boost&#39;: 201,
- &#39;performance&#39;: 1093,
- &#39;distributed&#39;: 454,
- &#39;database&#39;: 390,
- &#39;analyze&#39;: 98,
- &#39;ny&#39;: 1034,
- &#39;restaurant&#39;: 1270,
- &#39;using&#39;: 1575,
- &#39;spark&#39;: 1396,
- &#39;dsx&#39;: 478,
- &#39;browsing&#39;: 217,
- &#39;postgresql&#39;: 1135,
- &#39;compose&#39;: 319,
- &#39;upgrading&#39;: 1564,
- &#39;9&#39;: 46,
- &#39;5&#39;: 39,
- &#39;wrangling&#39;: 1637,
- &#39;slack&#39;: 1380,
- &#39;bowl&#39;: 205,
- &#39;apache&#39;: 107,
- &#39;predict&#39;: 1147,
- &#39;attack&#39;: 132,
- &#39;vector&#39;: 1585,
- &#39;among&#39;: 91,
- &#39;billion&#39;: 191,
- &#39;user&#39;: 1574,
- &#39;trillion&#39;: 1537,
- &#39;event&#39;: 544,
- &#39;offline&#39;: 1045,
- &#39;first&#39;: 593,
- &#39;io&#39;: 797,
- &#39;apps&#39;: 117,
- &#39;swift&#39;: 1460,
- &#39;cloudant&#39;: 289,
- &#39;sync&#39;: 1463,
- &#39;part&#39;: 1083,
- &#39;1&#39;: 7,
- &#39;datastore&#39;: 394,
- &#39;warehousing&#39;: 1605,
- &#39;geojson&#39;: 652,
- &#39;document&#39;: 459,
- &#39;timeseries&#39;: 1510,
- &#39;analysis&#39;: 94,
- &#39;jupyter&#39;: 820,
- &#39;notebook&#39;: 1029,
- &#39;bridging&#39;: 213,
- &#39;gap&#39;: 640,
- &#39;python&#39;: 1193,
- &#39;scala&#39;: 1306,
- &#39;got&#39;: 669,
- &#39;zip&#39;: 1652,
- &#39;code&#39;: 293,
- &#39;prep&#39;: 1153,
- &#39;ibm&#39;: 736,
- &#39;watson&#39;: 1607,
- &#39;lab&#39;: 845,
- &#39;medium&#39;: 949,
- &#39;2&#39;: 18,
- &#39;0&#39;: 0,
- &#39;extend&#39;: 568,
- &#39;structured&#39;: 1443,
- &#39;ml&#39;: 973,
- &#39;higher&#39;: 710,
- &#39;order&#39;: 1062,
- &#39;logistic&#39;: 892,
- &#39;regression&#39;: 1247,
- &#39;large&#39;: 853,
- &#39;datasets&#39;: 393,
- &#39;mysql&#39;: 999,
- &#39;greatest&#39;: 678,
- &#39;public&#39;: 1182,
- &#39;ai&#39;: 76,
- &#39;startup&#39;: 1420,
- &#39;grind&#39;: 680,
- &#39;finding&#39;: 591,
- &#39;mode&#39;: 977,
- &#39;working&#39;: 1634,
- &#39;interactively&#39;: 786,
- &#39;rstudio&#39;: 1292,
- &#39;mapping&#39;: 928,
- &#39;pixiedust&#39;: 1115,
- &#39;mapbox&#39;: 927,
- &#39;move&#39;: 989,
- &#39;csvs&#39;: 378,
- &#39;different&#39;: 438,
- &#39;json&#39;: 816,
- &#39;doc&#39;: 458,
- &#39;store&#39;: 1431,
- &#39;tutorial&#39;: 1542,
- &#39;build&#39;: 220,
- &#39;query&#39;: 1198,
- &#39;geospatial&#39;: 653,
- &#39;index&#39;: 762,
- &#39;conversational&#39;: 347,
- &#39;interface&#39;: 789,
- &#39;new&#39;: 1014,
- &#39;paradigm&#39;: 1078,
- &#39;creating&#39;: 370,
- &#39;experience&#39;: 557,
- &#39;machine&#39;: 908,
- &#39;learning&#39;: 864,
- &#39;parking&#39;: 1082,
- &#39;difficulty&#39;: 440,
- &#39;getting&#39;: 656,
- &#39;best&#39;: 180,
- &#39;pyspark&#39;: 1192,
- &#39;deep&#39;: 406,
- &#39;forest&#39;: 615,
- &#39;towards&#39;: 1518,
- &#39;alternative&#39;: 84,
- &#39;neural&#39;: 1010,
- &#39;network&#39;: 1009,
- &#39;coursera&#39;: 364,
- &#39;open&#39;: 1050,
- &#39;api&#39;: 109,
- &#39;economy&#39;: 490,
- &#39;accelerates&#39;: 49,
- &#39;growth&#39;: 683,
- &#39;big&#39;: 186,
- &#39;sign&#39;: 1370,
- &#39;free&#39;: 626,
- &#39;trial&#39;: 1534,
- &#39;kaggler&#39;: 825,
- &#39;model&#39;: 978,
- &#39;stacking&#39;: 1414,
- &#39;practice&#39;: 1144,
- &#39;brunel&#39;: 218,
- &#39;ipython&#39;: 799,
- &#39;top&#39;: 1515,
- &#39;10&#39;: 8,
- &#39;use&#39;: 1571,
- &#39;case&#39;: 245,
- &#39;gaze&#39;: 641,
- &#39;reddit&#39;: 1240,
- &#39;crystal&#39;: 376,
- &#39;ball&#39;: 163,
- &#39;visualization&#39;: 1595,
- &#39;playbook&#39;: 1117,
- &#39;right&#39;: 1281,
- &#39;level&#39;: 870,
- &#39;detail&#39;: 426,
- &#39;create&#39;: 368,
- &#39;custom&#39;: 382,
- &#39;domain&#39;: 464,
- &#39;cloudflare&#39;: 290,
- &#39;developer&#39;: 430,
- &#39;querying&#39;: 1199,
- &#39;primary&#39;: 1161,
- &#39;pulling&#39;: 1186,
- &#39;displaying&#39;: 452,
- &#39;etf&#39;: 538,
- &#39;ensemble&#39;: 526,
- &#39;improve&#39;: 755,
- &#39;result&#39;: 1273,
- &#39;customizing&#39;: 384,
- &#39;mongodb&#39;: 985,
- &#39;shell&#39;: 1362,
- &#39;compact&#39;: 314,
- &#39;prompt&#39;: 1175,
- &#39;started&#39;: 1418,
- &#39;scylladb&#39;: 1326,
- &#39;tensorflow&#39;: 1488,
- &#39;course&#39;: 363,
- &#39;university&#39;: 1555,
- &#39;uncover&#39;: 1551,
- &#39;product&#39;: 1168,
- &#39;insight&#39;: 777,
- &#39;hidden&#39;: 708,
- &#39;stack&#39;: 1413,
- &#39;overflow&#39;: 1068,
- &#39;start&#39;: 1417,
- &#39;developing&#39;: 431,
- &#39;q&#39;: 1195,
- &#39;voting&#39;: 1599,
- &#39;app&#39;: 111,
- &#39;rethinkdb&#39;: 1274,
- &#39;install&#39;: 778,
- &#39;conversion&#39;: 348,
- &#39;workbench&#39;: 1631,
- &#39;documentation&#39;: 460,
- &#39;geofile&#39;: 651,
- &#39;openstreetmap&#39;: 1052,
- &#39;ii&#39;: 744,
- &#39;graph&#39;: 673,
- &#39;based&#39;: 165,
- &#39;modern&#39;: 981,
- &#39;algorithm&#39;: 82,
- &#39;introducing&#39;: 795,
- &#39;stream&#39;: 1437,
- &#39;designer&#39;: 423,
- &#39;8&#39;: 44,
- &#39;way&#39;: 1608,
- &#39;turn&#39;: 1541,
- &#39;value&#39;: 1581,
- &#39;flight&#39;: 601,
- &#39;delay&#39;: 411,
- &#39;mllib&#39;: 974,
- &#39;flightstats&#39;: 603,
- &#39;weather&#39;: 1610,
- &#39;simple&#39;: 1373,
- &#39;autocomplete&#39;: 143,
- &#39;service&#39;: 1350,
- &#39;transfer&#39;: 1526,
- &#39;prediction&#39;: 1149,
- &#39;via&#39;: 1590,
- &#39;variational&#39;: 1584,
- &#39;autoencoders&#39;: 144,
- &#39;advancement&#39;: 68,
- &#39;community&#39;: 313,
- &#39;tame&#39;: 1475,
- &#39;valley&#39;: 1580,
- &#39;hessian&#39;: 707,
- &#39;hack&#39;: 689,
- &#39;optimizing&#39;: 1060,
- &#39;neuralnetworks&#39;: 1012,
- &#39;autonomous&#39;: 147,
- &#39;agent&#39;: 73,
- &#39;readr&#39;: 1225,
- &#39;metric&#39;: 956,
- &#39;maven&#39;: 943,
- &#39;window&#39;: 1622,
- &#39;function&#39;: 634,
- &#39;importance&#39;: 751,
- &#39;excluding&#39;: 553,
- &#39;unnecessary&#39;: 1558,
- &#39;making&#39;: 917,
- &#39;predicting&#39;: 1148,
- &#39;gentrification&#39;: 649,
- &#39;longitudinal&#39;: 896,
- &#39;census&#39;: 251,
- &#39;interconnect&#39;: 787,
- &#39;u&#39;: 1548,
- &#39;foodtracker&#39;: 611,
- &#39;find&#39;: 589,
- &#39;mongo&#39;: 984,
- &#39;id&#39;: 740,
- &#39;php&#39;: 1104,
- &#39;library&#39;: 874,
- &#39;introduction&#39;: 796,
- &#39;scientific&#39;: 1315,
- &#39;bit&#39;: 193,
- &#39;math&#39;: 939,
- &#39;behind&#39;: 178,
- &#39;numpy&#39;: 1033,
- &#39;calculating&#39;: 233,
- &#39;moving&#39;: 992,
- &#39;average&#39;: 150,
- &#39;pouchdb&#39;: 1137,
- &#39;collection&#39;: 301,
- &#39;web&#39;: 1611,
- &#39;node&#39;: 1023,
- &#39;j&#39;: 801,
- &#39;could&#39;: 361,
- &#39;next&#39;: 1016,
- &#39;september&#39;: 1344,
- &#39;27&#39;: 31,
- &#39;2016&#39;: 21,
- &#39;3&#39;: 34,
- &#39;kind&#39;: 836,
- &#39;context&#39;: 340,
- &#39;art&#39;: 127,
- &#39;frame&#39;: 622,
- &#39;tour&#39;: 1517,
- &#39;may&#39;: 945,
- &#39;scale&#39;: 1308,
- &#39;60&#39;: 41,
- &#39;tb&#39;: 1480,
- &#39;production&#39;: 1169,
- &#39;16&#39;: 14,
- &#39;action&#39;: 57,
- &#39;leverage&#39;: 871,
- &#39;scikit&#39;: 1317,
- &#39;learn&#39;: 862,
- &#39;core&#39;: 354,
- &#39;transform&#39;: 1527,
- &#39;anything&#39;: 106,
- &#39;wml&#39;: 1627,
- &#39;janusgraph&#39;: 805,
- &#39;load&#39;: 887,
- &#39;twitter&#39;: 1545,
- &#39;dashdb&#39;: 388,
- &#39;testthat&#39;: 1492,
- &#39;beyond&#39;: 183,
- &#39;july&#39;: 819,
- &#39;26&#39;: 30,
- &#39;collector&#39;: 302,
- &#39;microservices&#39;: 957,
- &#39;edition&#39;: 492,
- &#39;20&#39;: 19,
- &#39;r&#39;: 1204,
- &#39;package&#39;: 1072,
- &#39;import&#39;: 750,
- &#39;website&#39;: 1616,
- &#39;engagement&#39;: 519,
- &#39;tracking&#39;: 1521,
- &#39;elasticsearch&#39;: 499,
- &#39;mistake&#39;: 970,
- &#39;avoid&#39;: 152,
- &#39;starting&#39;: 1419,
- &#39;career&#39;: 243,
- &#39;deploy&#39;: 416,
- &#39;application&#39;: 114,
- &#39;bluemix&#39;: 199,
- &#39;armand&#39;: 122,
- &#39;ruiz&#39;: 1294,
- &#39;gabernet&#39;: 637,
- &#39;bigdatanyc&#39;: 187,
- &#39;thecube&#39;: 1494,
- &#39;december&#39;: 404,
- &#39;improving&#39;: 758,
- &#39;quality&#39;: 1197,
- &#39;life&#39;: 875,
- &#39;empowered&#39;: 513,
- &#39;november&#39;: 1032,
- &#39;08&#39;: 5,
- &#39;map&#39;: 926,
- &#39;usa&#39;: 1569,
- &#39;river&#39;: 1283,
- &#39;ggplot2&#39;: 658,
- &#39;seven&#39;: 1356,
- &#39;day&#39;: 399,
- &#39;asset&#39;: 130,
- &#39;project&#39;: 1174,
- &#39;catalog&#39;: 247,
- &#39;choose&#39;: 269,
- &#39;ease&#39;: 486,
- &#39;strain&#39;: 1435,
- &#39;volume&#39;: 1598,
- &#39;rise&#39;: 1282,
- &#39;15&#39;: 13,
- &#39;building&#39;: 222,
- &#39;progressive&#39;: 1173,
- &#39;drive&#39;: 471,
- &#39;design&#39;: 422,
- &#39;matter&#39;: 942,
- &#39;erik&#39;: 532,
- &#39;bernhardsson&#39;: 179,
- &#39;fast&#39;: 579,
- &#39;flexible&#39;: 600,
- &#39;easier&#39;: 487,
- &#39;experimentation&#39;: 558,
- &#39;quick&#39;: 1202,
- &#39;tip&#39;: 1511,
- &#39;magic&#39;: 910,
- &#39;tidy&#39;: 1504,
- &#39;script&#39;: 1322,
- &#39;systemml&#39;: 1467,
- &#39;february&#39;: 583,
- &#39;28&#39;: 32,
- &#39;practical&#39;: 1143,
- &#39;random&#39;: 1210,
- &#39;parameter&#39;: 1081,
- &#39;tuning&#39;: 1540,
- &#39;migrating&#39;: 961,
- &#39;customer&#39;: 383,
- &#39;one&#39;: 1048,
- &#39;preschool&#39;: 1155,
- &#39;launch&#39;: 855,
- &#39;job&#39;: 811,
- &#39;submit&#39;: 1447,
- &#39;dynamic&#39;: 483,
- &#39;duo&#39;: 480,
- &#39;inside&#39;: 776,
- &#39;picking&#39;: 1107,
- &#39;sql&#39;: 1407,
- &#39;nosql&#39;: 1028,
- &#39;view&#39;: 1592,
- &#39;hoopla&#39;: 718,
- &#39;statistic&#39;: 1423,
- &#39;hacker&#39;: 691,
- &#39;joinery&#39;: 813,
- &#39;meteor&#39;: 953,
- &#39;couchdb&#39;: 358,
- &#39;search&#39;: 1328,
- &#39;faceting&#39;: 576,
- &#39;scratch&#39;: 1320,
- &#39;translating&#39;: 1530,
- &#39;backend&#39;: 158,
- &#39;frontend&#39;: 630,
- &#39;need&#39;: 1006,
- &#39;feature&#39;: 582,
- &#39;important&#39;: 752,
- &#39;graphing&#39;: 676,
- &#39;panda&#39;: 1076,
- &#39;collecting&#39;: 300,
- &#39;cheat&#39;: 265,
- &#39;sheet&#39;: 1361,
- &#39;painless&#39;: 1074,
- &#39;ly&#39;: 907,
- &#39;01&#39;: 1,
- &#39;backup&#39;: 160,
- &#39;7&#39;: 42,
- &#39;execute&#39;: 554,
- &#39;common&#39;: 311,
- &#39;http&#39;: 726,
- &#39;command&#39;: 309,
- &#39;manipulation&#39;: 924,
- &#39;designing&#39;: 424,
- &#39;ufc&#39;: 1550,
- &#39;moneyball&#39;: 983,
- &#39;emile&#39;: 510,
- &#39;baizel&#39;: 162,
- &#39;fintech&#39;: 592,
- &#39;bot&#39;: 204,
- &#39;sentiment&#39;: 1343,
- &#39;sparkr&#39;: 1399,
- &#39;beginner&#39;: 175,
- &#39;popular&#39;: 1126,
- &#39;type&#39;: 1547,
- &#39;changing&#39;: 258,
- &#39;step&#39;: 1427,
- &#39;interview&#39;: 793,
- &#39;jakob&#39;: 802,
- &#39;odersky&#39;: 1043,
- &#39;12&#39;: 10,
- &#39;throw&#39;: 1502,
- &#39;problem&#39;: 1165,
- &#39;unlock&#39;: 1556,
- &#39;true&#39;: 1538,
- &#39;lake&#39;: 847,
- &#39;db2&#39;: 400,
- &#39;warehouse&#39;: 1604,
- &#39;cloud&#39;: 288,
- &#39;qr&#39;: 1196,
- &#39;badge&#39;: 161,
- &#39;scanner&#39;: 1310,
- &#39;cd&#39;: 250,
- &#39;hybrid&#39;: 733,
- &#39;campus&#39;: 237,
- &#39;discount&#39;: 447,
- &#39;solve&#39;: 1390,
- &#39;90&#39;: 47,
- &#39;nlp&#39;: 1022,
- &#39;cancellation&#39;: 238,
- &#39;tableau&#39;: 1469,
- &#39;exponentially&#39;: 565,
- &#39;weighted&#39;: 1619,
- &#39;exposed&#39;: 567,
- &#39;jonas&#39;: 814,
- &#39;helfer&#39;: 703,
- &#39;join&#39;: 812,
- &#39;across&#39;: 56,
- &#39;graphql&#39;: 677,
- &#39;variable&#39;: 1582,
- &#39;selection&#39;: 1336,
- &#39;d3heatmap&#39;: 386,
- &#39;interactive&#39;: 785,
- &#39;heat&#39;: 702,
- &#39;citizen&#39;: 276,
- &#39;scientist&#39;: 1316,
- &#39;death&#39;: 402,
- &#39;star&#39;: 1415,
- &#39;seti&#39;: 1353,
- &#39;set&#39;: 1352,
- &#39;location&#39;: 891,
- &#39;tracker&#39;: 1520,
- &#39;stock&#39;: 1428,
- &#39;market&#39;: 932,
- &#39;portal&#39;: 1127,
- &#39;powerups&#39;: 1142,
- &#39;deleted&#39;: 412,
- &#39;deployment&#39;: 419,
- &#39;together&#39;: 1513,
- &#39;classcraft&#39;: 280,
- &#39;push&#39;: 1188,
- &#39;notification&#39;: 1031,
- &#39;local&#39;: 890,
- &#39;phd&#39;: 1102,
- &#39;struggling&#39;: 1444,
- &#39;deeper&#39;: 407,
- &#39;pipe&#39;: 1110,
- &#39;connector&#39;: 333,
- &#39;must&#39;: 997,
- &#39;attend&#39;: 134,
- &#39;2018&#39;: 23,
- &#39;faceted&#39;: 575,
- &#39;made&#39;: 909,
- &#39;easy&#39;: 488,
- &#39;word&#39;: 1628,
- &#39;tool&#39;: 1514,
- &#39;openwhisk&#39;: 1053,
- &#39;power&#39;: 1138,
- &#39;prototyping&#39;: 1178,
- &#39;red&#39;: 1239,
- &#39;camp&#39;: 235,
- &#39;california&#39;: 234,
- &#39;bayesian&#39;: 171,
- &#39;regularization&#39;: 1248,
- &#39;overview&#39;: 1071,
- &#39;ide&#39;: 741,
- &#39;expert&#39;: 559,
- &#39;holden&#39;: 713,
- &#39;karau&#39;: 826,
- &#39;roi&#39;: 1288,
- &#39;leveraging&#39;: 872,
- &#39;source&#39;: 1393,
- &#39;driver&#39;: 473,
- &#39;foundational&#39;: 621,
- &#39;methodology&#39;: 955,
- &#39;excel&#39;: 552,
- &#39;task&#39;: 1478,
- &#39;demonstrated&#39;: 415,
- &#39;horizontal&#39;: 721,
- &#39;scaling&#39;: 1309,
- &#39;arrives&#39;: 125,
- &#39;enterprise&#39;: 527,
- &#39;march&#39;: 930,
- &#39;sensibility&#39;: 1341,
- &#39;hull&#39;: 730,
- &#39;digital&#39;: 441,
- &#39;monitoring&#39;: 986,
- &#39;available&#39;: 149,
- &#39;real&#39;: 1227,
- &#39;time&#39;: 1508,
- &#39;artificial&#39;: 128,
- &#39;intelligence&#39;: 783,
- &#39;ethically&#39;: 540,
- &#39;speaking&#39;: 1402,
- &#39;aws&#39;: 154,
- &#39;vpc&#39;: 1600,
- &#39;secured&#39;: 1333,
- &#39;terraform&#39;: 1490,
- &#39;grows&#39;: 682,
- &#39;handle&#39;: 695,
- &#39;ad&#39;: 60,
- &#39;hoc&#39;: 712,
- &#39;movement&#39;: 990,
- &#39;storage&#39;: 1430,
- &#39;war&#39;: 1603,
- &#39;genome&#39;: 647,
- &#39;revolutionizes&#39;: 1279,
- &#39;industry&#39;: 766,
- &#39;world&#39;: 1635,
- &#39;domination&#39;: 465,
- &#39;keynote&#39;: 833,
- &#39;mitch&#39;: 971,
- &#39;pirtle&#39;: 1111,
- &#39;capitalone&#39;: 240,
- &#39;serverless&#39;: 1349,
- &#39;charity&#39;: 260,
- &#39;major&#39;: 914,
- &#39;observability&#39;: 1038,
- &#39;glorious&#39;: 664,
- &#39;future&#39;: 635,
- &#39;method&#39;: 954,
- &#39;xml&#39;: 1643,
- &#39;date&#39;: 396,
- &#39;dating&#39;: 397,
- &#39;understanding&#39;: 1553,
- &#39;mango&#39;: 923,
- &#39;v&#39;: 1577,
- &#39;java&#39;: 807,
- &#39;ee&#39;: 494,
- &#39;webapp&#39;: 1612,
- &#39;14&#39;: 12,
- &#39;thinky&#39;: 1498,
- &#39;potency&#39;: 1136,
- &#39;idempotent&#39;: 742,
- &#39;rabbitmq&#39;: 1206,
- &#39;upsert&#39;: 1567,
- &#39;modeling&#39;: 980,
- &#39;energy&#39;: 518,
- &#39;usage&#39;: 1570,
- &#39;york&#39;: 1647,
- &#39;city&#39;: 277,
- &#39;dplyr&#39;: 467,
- &#39;tidyr&#39;: 1506,
- &#39;connecting&#39;: 331,
- &#39;pick&#39;: 1106,
- &#39;envoy&#39;: 530,
- &#39;redis&#39;: 1241,
- &#39;smart&#39;: 1382,
- &#39;flood&#39;: 604,
- &#39;ocean&#39;: 1040,
- &#39;opportunity&#39;: 1057,
- &#39;authentication&#39;: 140,
- &#39;iii&#39;: 745,
- &#39;bigdl&#39;: 188,
- &#39;apply&#39;: 115,
- &#39;sapply&#39;: 1304,
- &#39;lapply&#39;: 852,
- &#39;visual&#39;: 1593,
- &#39;explanation&#39;: 562,
- &#39;back&#39;: 157,
- &#39;propagation&#39;: 1176,
- &#39;movetocloud&#39;: 991,
- &#39;bradley&#39;: 207,
- &#39;holt&#39;: 714,
- &#39;channel&#39;: 259,
- &#39;publish&#39;: 1184,
- &#39;shiny&#39;: 1364,
- &#39;flow&#39;: 605,
- &#39;sequencing&#39;: 1346,
- &#39;23&#39;: 27,
- &#39;january&#39;: 804,
- &#39;speed&#39;: 1404,
- &#39;self&#39;: 1337,
- &#39;preparation&#39;: 1154,
- &#39;refinery&#39;: 1245,
- &#39;nonparametric&#39;: 1026,
- &#39;stats&#39;: 1425,
- &#39;scenario&#39;: 1312,
- &#39;multicloud&#39;: 993,
- &#39;enable&#39;: 515,
- &#39;cache&#39;: 229,
- &#39;entity&#39;: 528,
- &#39;framework&#39;: 623,
- &#39;6&#39;: 40,
- &#39;object&#39;: 1037,
- &#39;detection&#39;: 428,
- &#39;yolo&#39;: 1646,
- &#39;kiwi&#39;: 838,
- &#39;wearable&#39;: 1609,
- &#39;graphframes&#39;: 674,
- &#39;4&#39;: 38,
- &#39;omni&#39;: 1047,
- &#39;seium&#39;: 1335,
- &#39;heartbits&#39;: 701,
- &#39;hackathon&#39;: 690,
- &#39;verse&#39;: 1587,
- &#39;validation&#39;: 1579,
- &#39;example&#39;: 551,
- &#39;system&#39;: 1466,
- &#39;dez&#39;: 434,
- &#39;blanchfield&#39;: 194,
- &#39;craig&#39;: 366,
- &#39;brown&#39;: 215,
- &#39;david&#39;: 398,
- &#39;mathison&#39;: 940,
- &#39;jennifer&#39;: 810,
- &#39;shin&#39;: 1363,
- &#39;mike&#39;: 963,
- &#39;tamir&#39;: 1477,
- &#39;lifelong&#39;: 876,
- &#39;automation&#39;: 146,
- &#39;help&#39;: 704,
- &#39;get&#39;: 655,
- &#39;smarter&#39;: 1383,
- &#39;apple&#39;: 113,
- &#39;add&#39;: 61,
- &#39;partnership&#39;: 1086,
- &#39;coupling&#39;: 362,
- &#39;pubsub&#39;: 1185,
- &#39;socket&#39;: 1387,
- &#39;xml2&#39;: 1644,
- &#39;cluster&#39;: 291,
- &#39;raspberry&#39;: 1217,
- &#39;pi&#39;: 1105,
- &#39;sourcing&#39;: 1394,
- &#39;223gb&#39;: 26,
- &#39;driving&#39;: 474,
- &#39;udacity&#39;: 1549,
- &#39;inc&#39;: 760,
- &#39;etcd&#39;: 536,
- &#39;apis&#39;: 110,
- &#39;possibility&#39;: 1129,
- &#39;replicate&#39;: 1259,
- &#39;sample&#39;: 1302,
- &#39;builder&#39;: 221,
- &#39;podcast&#39;: 1122,
- &#39;trick&#39;: 1535,
- &#39;configuration&#39;: 325,
- &#39;control&#39;: 344,
- &#39;version&#39;: 1588,
- &#39;amas&#39;: 86,
- &#39;sector&#39;: 1331,
- &#39;correlation&#39;: 355,
- &#39;06&#39;: 4,
- &#39;youtube&#39;: 1648,
- &#39;configuring&#39;: 326,
- &#39;google&#39;: 668,
- &#39;platform&#39;: 1116,
- &#39;statistical&#39;: 1424,
- &#39;bias&#39;: 185,
- &#39;explained&#39;: 561,
- &#39;run&#39;: 1296,
- &#39;bunyan&#39;: 225,
- &#39;zapier&#39;: 1649,
- &#39;integrate&#39;: 781,
- &#39;connection&#39;: 332,
- &#39;trend&#39;: 1533,
- &#39;talk&#39;: 1473,
- &#39;raw&#39;: 1221,
- &#39;lucene&#39;: 905,
- &#39;within&#39;: 1625,
- &#39;analyzing&#39;: 100,
- &#39;pet&#39;: 1099,
- &#39;name&#39;: 1001,
- &#39;crosstabview&#39;: 375,
- &#39;drone&#39;: 475,
- &#39;conquers&#39;: 336,
- &#39;layer&#39;: 857,
- &#39;twelve&#39;: 1544,
- &#39;color&#39;: 303,
- &#39;africa&#39;: 72,
- &#39;hood&#39;: 716,
- &#39;rainbow&#39;: 1209,
- &#39;crosstab&#39;: 374,
- &#39;revisited&#39;: 1277,
- &#39;pivoting&#39;: 1113,
- &#39;wisely&#39;: 1624,
- &#39;enhance&#39;: 522,
- &#39;uploads&#39;: 1566,
- &#39;31&#39;: 36,
- &#39;writing&#39;: 1640,
- &#39;directly&#39;: 445,
- &#39;receptive&#39;: 1233,
- &#39;field&#39;: 585,
- &#39;arithmetic&#39;: 121,
- &#39;convolutional&#39;: 352,
- &#39;understand&#39;: 1552,
- &#39;replication&#39;: 1261,
- &#39;economic&#39;: 489,
- &#39;justice&#39;: 821,
- &#39;civic&#39;: 278,
- &#39;misconception&#39;: 968,
- &#39;awesome&#39;: 153,
- &#39;paper&#39;: 1077,
- &#39;business&#39;: 226,
- &#39;chatbot&#39;: 263,
- &#39;dimensionality&#39;: 442,
- &#39;reduction&#39;: 1243,
- &#39;enrich&#39;: 525,
- &#39;multiple&#39;: 995,
- &#39;accessing&#39;: 51,
- &#39;relational&#39;: 1252,
- &#39;go&#39;: 666,
- &#39;accelerate&#39;: 48,
- &#39;workflow&#39;: 1633,
- &#39;backpropagation&#39;: 159,
- &#39;complex&#39;: 318,
- &#39;behavior&#39;: 176,
- &#39;august&#39;: 137,
- &#39;30&#39;: 35,
- &#39;generated&#39;: 645,
- &#39;column&#39;: 304,
- &#39;indexing&#39;: 763,
- &#39;ambry&#39;: 89,
- &#39;linkedin&#39;: 883,
- &#39;glynnbird&#39;: 665,
- &#39;couchimport&#39;: 360,
- &#39;perform&#39;: 1092,
- &#39;group&#39;: 681,
- &#39;facet&#39;: 574,
- &#39;geo&#39;: 650,
- &#39;series&#39;: 1347,
- &#39;recurrent&#39;: 1238,
- &#39;lstms&#39;: 903,
- &#39;probabilistic&#39;: 1164,
- &#39;graphical&#39;: 675,
- &#39;demand&#39;: 413,
- &#39;weekend&#39;: 1618,
- &#39;reading&#39;: 1223,
- &#39;neurally&#39;: 1011,
- &#39;embedded&#39;: 509,
- &#39;emojis&#39;: 511,
- &#39;text&#39;: 1493,
- &#39;classification&#39;: 281,
- &#39;behavioral&#39;: 177,
- &#39;profiling&#39;: 1172,
- &#39;created&#39;: 369,
- &#39;copy&#39;: 353,
- &#39;mastering&#39;: 936,
- &#39;filter&#39;: 588,
- &#39;foreign&#39;: 614,
- &#39;wrapper&#39;: 1638,
- &#39;manage&#39;: 919,
- &#39;mycheatsheets&#39;: 998,
- &#39;com&#39;: 305,
- &#39;enhanced&#39;: 523,
- &#39;alchemy&#39;: 78,
- &#39;basket&#39;: 167,
- &#39;imitation&#39;: 747,
- &#39;sincere&#39;: 1377,
- &#39;form&#39;: 617,
- &#39;flattery&#39;: 597,
- &#39;porting&#39;: 1128,
- &#39;zendesk&#39;: 1650,
- &#39;existing&#39;: 556,
- &#39;deploying&#39;: 418,
- &#39;logshare&#39;: 894,
- &#39;dive&#39;: 457,
- &#39;fun&#39;: 633,
- &#39;kudos&#39;: 842,
- &#39;challenge&#39;: 256,
- &#39;generalization&#39;: 643,
- &#39;authenticating&#39;: 139,
- &#39;jsonwebtoken&#39;: 818,
- &#39;following&#39;: 608,
- &#39;roadmap&#39;: 1284,
- &#39;pivot&#39;: 1112,
- &#39;table&#39;: 1468,
- &#39;toy&#39;: 1519,
- &#39;make&#39;: 915,
- &#39;better&#39;: 182,
- &#39;october&#39;: 1041,
- &#39;25&#39;: 29,
- &#39;secondary&#39;: 1329,
- &#39;fighting&#39;: 586,
- &#39;gerrymandering&#39;: 654,
- &#39;draw&#39;: 470,
- &#39;fairer&#39;: 578,
- &#39;congressional&#39;: 328,
- &#39;district&#39;: 456,
- &#39;announcing&#39;: 102,
- &#39;environment&#39;: 529,
- &#39;beta&#39;: 181,
- &#39;white&#39;: 1621,
- &#39;transforming&#39;: 1529,
- &#39;collect&#39;: 299,
- &#39;fitbit&#39;: 595,
- &#39;effective&#39;: 496,
- &#39;team&#39;: 1481,
- &#39;sparklyr&#39;: 1398,
- &#39;structure&#39;: 1442,
- &#39;innate&#39;: 773,
- &#39;prior&#39;: 1162,
- &#39;lorna&#39;: 901,
- &#39;jane&#39;: 803,
- &#39;mitchell&#39;: 972,
- &#39;surviving&#39;: 1457,
- &#39;failure&#39;: 577,
- &#39;ready&#39;: 1226,
- &#39;oplog&#39;: 1056,
- &#39;marketing&#39;: 933,
- &#39;campaign&#39;: 236,
- &#39;intro&#39;: 794,
- &#39;declarative&#39;: 405,
- &#39;migration&#39;: 962,
- &#39;connect&#39;: 329,
- &#39;activity&#39;: 58,
- &#39;apex&#39;: 108,
- &#39;clustering&#39;: 292,
- &#39;perplexed&#39;: 1096,
- &#39;visualising&#39;: 1594,
- &#39;snowzilla&#39;: 1385,
- &#39;upload&#39;: 1565,
- &#39;fathom&#39;: 581,
- &#39;management&#39;: 921,
- &#39;mobile&#39;: 975,
- &#39;coming&#39;: 308,
- &#39;soon&#39;: 1392,
- &#39;transporter&#39;: 1532,
- &#39;released&#39;: 1253,
- &#39;streamlined&#39;: 1439,
- &#39;related&#39;: 1251,
- &#39;pythonista&#39;: 1194,
- &#39;katharine&#39;: 827,
- &#39;jarmul&#39;: 806,
- &#39;continuous&#39;: 341,
- &#39;esri&#39;: 533,
- &#39;arcgis&#39;: 119,
- &#39;conflict&#39;: 327,
- &#39;aggregation&#39;: 74,
- &#39;impressive&#39;: 754,
- &#39;improvement&#39;: 757,
- &#39;studio&#39;: 1445,
- &#39;bridge&#39;: 212,
- &#39;let&#39;: 869,
- &#39;server&#39;: 1348,
- &#39;cf&#39;: 254,
- &#39;amazon&#39;: 88,
- &#39;emr&#39;: 514,
- &#39;helping&#39;: 706,
- &#39;educational&#39;: 493,
- &#39;organization&#39;: 1064,
- &#39;innovate&#39;: 774,
- &#39;rethinking&#39;: 1275,
- &#39;replex&#39;: 1258,
- &#39;parallel&#39;: 1079,
- &#39;processing&#39;: 1167,
- &#39;rest&#39;: 1269,
- &#39;presidential&#39;: 1157,
- &#39;election&#39;: 500,
- &#39;read&#39;: 1222,
- &#39;write&#39;: 1639,
- &#39;s3&#39;: 1300,
- &#39;bucket&#39;: 219,
- &#39;well&#39;: 1620,
- &#39;connected&#39;: 330,
- &#39;rabbit&#39;: 1205,
- &#39;meet&#39;: 950,
- &#39;middle&#39;: 958,
- &#39;median&#39;: 948,
- &#39;show&#39;: 1368,
- &#39;persistent&#39;: 1097,
- &#39;change&#39;: 257,
- &#39;config&#39;: 324,
- &#39;29&#39;: 33,
- &#39;center&#39;: 252,
- &#39;encrypt&#39;: 517,
- &#39;tl&#39;: 1512,
- &#39;certificate&#39;: 253,
- &#39;github&#39;: 661,
- &#39;adoption&#39;: 66,
- &#39;software&#39;: 1388,
- &#39;home&#39;: 715,
- &#39;airbnb&#39;: 77,
- &#39;maker&#39;: 916,
- &#39;palette&#39;: 1075,
- &#39;everything&#39;: 549,
- &#39;know&#39;: 840,
- &#39;nearest&#39;: 1004,
- &#39;neighbor&#39;: 1007,
- &#39;navigating&#39;: 1002,
- &#39;sxsw&#39;: 1462,
- &#39;cognitive&#39;: 295,
- &#39;preview&#39;: 1160,
- &#39;state&#39;: 1421,
- &#39;la&#39;: 844,
- &#39;dogfight&#39;: 462,
- &#39;1983&#39;: 17,
- &#39;small&#39;: 1381,
- &#39;pleasure&#39;: 1118,
- &#39;generally&#39;: 644,
- &#39;demo&#39;: 414,
- &#39;nyc&#39;: 1035,
- &#39;ep&#39;: 531,
- &#39;collaboration&#39;: 298,
- &#39;dronedeploy&#39;: 476,
- &#39;ops&#39;: 1058,
- &#39;depth&#39;: 420,
- &#39;look&#39;: 897,
- &#39;conversation&#39;: 346,
- &#39;gremlin&#39;: 679,
- &#39;icars&#39;: 739,
- &#39;ohlc&#39;: 1046,
- &#39;like&#39;: 877,
- &#39;wine&#39;: 1623,
- &#39;cheese&#39;: 268,
- &#39;24&#39;: 28,
- &#39;multiplying&#39;: 996,
- &#39;technology&#39;: 1483,
- &#39;company&#39;: 315,
- &#39;conquer&#39;: 334,
- &#39;line&#39;: 880,
- &#39;queue&#39;: 1201,
- &#39;11&#39;: 9,
- &#39;passage&#39;: 1087,
- &#39;hb2&#39;: 700,
- &#39;north&#39;: 1027,
- &#39;carolina&#39;: 244,
- &#39;permission&#39;: 1095,
- &#39;privacy&#39;: 1163,
- &#39;governance&#39;: 671,
- &#39;update&#39;: 1561,
- &#39;baby&#39;: 155,
- &#39;reality&#39;: 1228,
- &#39;precipitation&#39;: 1146,
- &#39;thing&#39;: 1496,
- &#39;hate&#39;: 699,
- &#39;amanda&#39;: 85,
- &#39;folson&#39;: 609,
- &#39;hacking&#39;: 692,
- &#39;dataminingapps&#39;: 392,
- &#39;13&#39;: 11,
- &#39;rather&#39;: 1220,
- &#39;basketball&#39;: 168,
- &#39;game&#39;: 638,
- &#39;elastic&#39;: 498,
- &#39;nba&#39;: 1003,
- &#39;ranking&#39;: 1213,
- &#39;anomaly&#39;: 103,
- &#39;advantage&#39;: 69,
- &#39;browser&#39;: 216,
- &#39;come&#39;: 307,
- &#39;converting&#39;: 350,
- &#39;importing&#39;: 753,
- &#39;shapefiles&#39;: 1357,
- &#39;hadoop&#39;: 693,
- &#39;advanced&#39;: 67,
- &#39;technique&#39;: 1482,
- &#39;intelligent&#39;: 784,
- &#39;gradient&#39;: 672,
- &#39;boosting&#39;: 202,
- &#39;extension&#39;: 569,
- &#39;markdown&#39;: 931,
- &#39;cheatsheet&#39;: 266,
- &#39;ruby&#39;: 1293,
- &#39;drowning&#39;: 477,
- &#39;cataloging&#39;: 248,
- &#39;fix&#39;: 596,
- ...}</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -18082,7 +17104,7 @@ NAN found at index =  919
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span><span class="p">)</span>
@@ -18101,7 +17123,7 @@ NAN found at index =  919
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
 
 
 
@@ -18125,7 +17147,7 @@ NAN found at index =  919
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_content_recs</span><span class="p">(</span><span class="n">article_id</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">df_content</span><span class="o">=</span><span class="n">df_content</span><span class="p">,</span> <span class="n">TfIdfMat</span><span class="o">=</span><span class="n">TfIdfMat</span><span class="p">,</span> <span class="n">vectorizer</span><span class="o">=</span><span class="n">vectorizer</span><span class="p">):</span>
@@ -18213,16 +17235,28 @@ Moreover, information on the number on times article have been seen could be use
 However, as soon as somebody has interacted at least once with the platform it would be possible to get a list of recommendation based on the articles' titles.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># make recommendations for a brand new user</span>
 <span class="c1"># This is not possible with the current code</span>
+</pre></div>
 
-<span class="c1"># make a recommendations for a user who only has interacted with an article</span>
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># make a recommendations for a user who only has interacted with a given article</span>
 <span class="n">rec_arts_id</span><span class="p">,</span> <span class="n">rec_arts_titles</span> <span class="o">=</span> <span class="n">make_content_recs</span><span class="p">(</span><span class="mi">235</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reference article title: &#39;</span><span class="p">,</span> <span class="n">df_content</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;article_id == 235&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">doc_full_name</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Id if the 5 most similar articles :&#39;</span><span class="p">,</span> <span class="n">rec_arts_id</span><span class="p">)</span>
@@ -18273,7 +17307,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Option 1: Use the matrix calculated in the cells above, renaming it to be used by the subsequent functions</span>
@@ -18294,7 +17328,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
 
 
 
@@ -18500,7 +17534,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Option 2: Load the matrix from a pikle file</span>
@@ -18528,7 +17562,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Perform SVD on the User-Item Matrix using the built-in function to get the three matrices</span>
@@ -18549,7 +17583,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[56]:</div>
 
 
 
@@ -18579,7 +17613,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate estimation errors with increasing number of latent features</span>
@@ -18609,7 +17643,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot results</span>
@@ -18673,7 +17707,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split train/test</span>
@@ -18689,7 +17723,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Implement function to extract matrices and vectors of features</span>
@@ -18731,7 +17765,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Call function</span>
@@ -18747,7 +17781,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check outputs</span>
@@ -18799,7 +17833,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replace the values in the dictionary below</span>
@@ -18861,7 +17895,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># fit SVD on the user_item_train matrix</span>
@@ -18882,7 +17916,7 @@ Num. of articles that are present only in the test dataset =  0
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
 
 
 
@@ -18900,7 +17934,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Find the indices in the train and test datasets that correnspond to the common users</span>
@@ -18926,7 +17960,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Find the indices in the train and test datasets that correnspond to the common articles</span>
@@ -18952,7 +17986,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Select the subsets of the training and test user_item matrices that correnspond to the common users</span>
@@ -18968,7 +18002,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Select also the common columns between training and testing</span>
@@ -18983,7 +18017,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Take a look at the reduced user_item matrix for training data</span>
@@ -19003,7 +18037,7 @@ Num. of articles that are present only in the test dataset =  0
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[69]:</div>
 
 
 
@@ -19209,7 +18243,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Take a look at the reduced user_item matrix for test data</span>
@@ -19229,7 +18263,7 @@ Num. of articles that are present only in the test dataset =  0
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
 
 
 
@@ -19435,7 +18469,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Select the rows in u_train that are associated with the common users</span>
@@ -19456,7 +18490,7 @@ Num. of articles that are present only in the test dataset =  0
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[69]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
 
 
 
@@ -19474,7 +18508,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Select the coulmns in vt_train that are associated with the common articles</span>
@@ -19495,7 +18529,7 @@ Num. of articles that are present only in the test dataset =  0
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
 
 
 
@@ -19520,7 +18554,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate estimation errors with increasing number of latent features</span>
@@ -19564,7 +18598,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot results</span>
@@ -19611,7 +18645,7 @@ Num. of articles that are present only in the test dataset =  0
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot results</span>
