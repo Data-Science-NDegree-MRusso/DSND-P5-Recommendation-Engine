@@ -53,7 +53,7 @@ The second family of recommendations is based on a _collaborative_ approach, in 
   <img width="850" height="225" src="./pictures/user-item-matrix.png">
 </p>
 
-* Then we implement a similarity metric based on the number of seen articles that two users have in common:  the highr that number, the more simialr the users are considered to be.   
+* Then we implement a similarity metric based on the number of seen articles that two users have in common:  the higher that number, the more simialr the users are considered to be.   
 In the notebook there are actually two differnt proposals to measure this kind of similarity: one makes use of the dot product and another of the [cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity).
 
 * Based on the information above it is possible to implement a function that, given an input a `user_id` and a integer `m` is capable of returning the first `m` article read by the users that are the most similar to `user_id`, and that `user_id` has not yet interacted to.
