@@ -44,6 +44,7 @@ As an example of the outcome of this section we can see the **top 7** ranked art
   <img width="850" height="160" src="./pictures/ranked-recs-example.png">
 </p>
 
+
 ## Sect. III - User-User Based Collaborative Filtering
 The second family of recommendations is based on a _collaborative_ approach, in which we investigate the dataset to identify _similarities_ between users.
 
@@ -56,7 +57,7 @@ The second family of recommendations is based on a _collaborative_ approach, in 
 * Then we implement a similarity metric based on the number of seen articles that two users have in common:  the higher that number, the more simialr the users are considered to be.   
 In the notebook there are actually two differnt proposals to measure this kind of similarity: one makes use of the dot product and another of the [cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity).
 
-* Based on the information above it is possible to implement a function that, given an input a `user_id` and a integer `m` is capable of returning the first `m` article read by the users that are the most similar to `user_id`, and that `user_id` has not yet interacted to.
+* Based on the information above it is possible to implement a function that, given an input a `user_id` and an integer `m` is capable of returning the first `m` article read by the users that are the most similar to `user_id`, and that `user_id` has not yet interacted to.
 * This function is than further refined to take into account also the absolute number of interactions that characterizes an article.
 
 As an example of the outcome of this section we can see the **top 10** recommendations for **user 20**:
@@ -64,13 +65,30 @@ As an example of the outcome of this section we can see the **top 10** recommend
 <p align="center">
   <img width="850" height="255" src="./pictures/collaborative-recs-example.png">
 </p>
+
+It is worth noting here that this method of generating recommendations cannot be used for brand new users, givrn that in that case there would not be enough information to assess similarity with existing ones.  
+This is not true for the rank-based approach, than doesn't need any prior information.
  
 
 ## Sect. IV - Content-Based Recommendations
 **Note**: This section was marked as "Optional" in the original notebook.  
 
-The strategy of recommendation implemented here will be based on _content_: a relationship between articles will be found based on some content charactrizing them, like title or description.  
-More specifically, the implemented solution looks for similar **titles** between the totality of the articles and an `article_id` provided as input. This is powered by an NLTK pipeline that includes a tokenizer, a lemmatizer and a TfIdf vecorizer. The similarity between TfIdf vectors (corrensponding to titles) is measured through cosine similarity.
+The strategy of recommendation implemented here will be based on _content_: a relationship between articles will be found based on some content charactrizing them, like title or description. 
+
+More specifically: 
+
+* The implemented solution looks for similar **titles** between the totality of the articles and an `article_id` provided as input. 
+* This is powered by an NLTK pipeline that includes a tokenizer, a lemmatizer and a TfIdf vecorizer. 
+* The similarity between TfIdf vectors (corrensponding to titles) is measured through cosine similarity.  
+* All of the above is wrapped in a function that takes in input the `article_id` and an integer `m` and returns the lists of the `m` more similar article id's and titles.
+
+As an example of the outcomes in this case we can see the **top 5** recommendations that are similar to **article 235**:
+
+<p align="center">
+  <img width="850" height="170" src="./pictures/content-recs-example.png">
+</p>
+
+As a final note, the current implementation of this recommendation strategy would not work for new users: however, a slightly modified approach is thinkable in which users are asked to provide a list of keywords and the NLP pipeline would then look for similarities in the titles. This would work even with no prior interaction from the user.
 
 ## Sect. V - Matrix Factorization
 
