@@ -50,7 +50,7 @@ The second family of recommendations is based on a _collaborative_ approach, in 
 * First of all, starting from the `df` dataframe we obtain a user-item matrix in which, for each unique user, we identify the article that they interacted with:
 
 <p align="center">
-  <img width="850" height="160" src="./pictures/user-item-matrix.png">
+  <img width="850" height="225" src="./pictures/user-item-matrix.png">
 </p>
 
 * Then we implement a similarity metric based on the number of seen articles that two users have in common:  the highr that number, the more simialr the users are considered to be.   
@@ -62,7 +62,7 @@ In the notebook there are actually two differnt proposals to measure this kind o
 As an example of the outcome of this section we can see the **top 10** recommendations for **user 20**:
 
 <p align="center">
-  <img width="850" height="160" src="./pictures/collaborative-recs-example.png">
+  <img width="850" height="255" src="./pictures/collaborative-recs-example.png">
 </p>
  
 
