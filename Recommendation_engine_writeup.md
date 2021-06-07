@@ -40,7 +40,9 @@ In this case, rank is measured through user-article interactions: the higher the
 
 As an example of the outcome of this section we can see:
 
-
+<p align="center">
+  <img src="./pictures/ranked-recs-example.png">
+</p>
 
 ## Sect. III - User-User Based Collaborative Filtering
 
