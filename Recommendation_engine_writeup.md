@@ -1,7 +1,9 @@
 # Recommendation Engine Project
 The goal of this project is to analyze the interactions that users have with articles on the IBM Watson Studio platform, and then create a recommendation engine to make suggestion to users about new articles they might like.  
 
-The projecte is completed as a Jupyter notebook available [here](./Recommendations_with_IBM.ipynb): in it we can distinguish V different sections, that will be described in more detail here in the following. The notebook was originally provided by Udacity, and each section included a list of questions and tasks that have been now completed.
+The projecte is completed as a Jupyter notebook available [here](./Recommendations_with_IBM.ipynb): in it we can distinguish V different sections, that will be described in more detail here in the following.  
+The notebook was originally provided by Udacity, and each section included a list of questions and tasks that have been now completed. The original template also 
+included some test functions to be called while progressing, to check on the results.
 
 ## Sect. I - Exploratory Data Analysis
 The data to work with consist of two different dataframes:
@@ -33,6 +35,11 @@ More quantitatively, the analysis showed that:
 
 
 ## Sect. II - Rank-Based Recommendations
+The first kind of recommendations that we try to provide are based on _rank_: given any user, we can provide them a list of the highest ranked items in our dataset.  
+In this case, rank is measured through user-article interactions: the higher the number of interactions is, the higher the rank of the article will be considered to be.  
+
+As an example of the outcome of this section we can see:
+
 
 
 ## Sect. III - User-User Based Collaborative Filtering
