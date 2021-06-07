@@ -66,8 +66,11 @@ As an example of the outcome of this section we can see the **top 10** recommend
 </p>
  
 
-## Sect. IV - Content-Based Recommendations (OPTIONAL)
+## Sect. IV - Content-Based Recommendations
+**Note**: This section was marked as "Optional" in the original notebook.  
 
+The strategy of recommendation implemented here will be based on _content_: a relationship between articles will be found based on some content charactrizing them, like title or description.  
+More specifically, the implemented solution looks for similar titles between the totality of the aericles and an `article_id` provided as input. This is powered by an NLTK pipeline that includes a tokenizer, a lemmatizer and a TfIdf vecorizer. The similarity between TfIdf vectors (corrensponding to titles) is measured through cosine similarity.
 
 ## Sect. V - Matrix Factorization
 
