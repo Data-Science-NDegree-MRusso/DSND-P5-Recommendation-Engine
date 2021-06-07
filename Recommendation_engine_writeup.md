@@ -38,7 +38,7 @@ More quantitatively, the analysis showed that:
 The first kind of recommendations that we try to provide are based on _rank_: given any user, we can provide them a list of the highest ranked items in our dataset.  
 In this case, rank is measured through user-article interactions: the higher the number of interactions is, the higher the rank of the article will be considered to be.  
 
-As an example of the outcome of this section we can see:
+As an example of the outcome of this section we can see the **top 7** ranked articles:
 
 <p align="center">
   <img src="./pictures/ranked-recs-example.png">
