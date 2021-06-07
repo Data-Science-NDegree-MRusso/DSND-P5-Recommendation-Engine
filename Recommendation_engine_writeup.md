@@ -1,5 +1,5 @@
 # Recommendation Engine Project
-The goal of this project is to analyze the interactions that users have with articles on the IBM Watson Studio platform, and then create a recommendation engine to make suggestion to users about new articles they might like.  
+The goal of this project is to analyze the interactions that users have with articles on the IBM Watson Studio platform, and then explore several recommendation strategies to make suggestion to users about new articles they might like.  
 
 The projecte is completed as a Jupyter notebook available [here](./Recommendations_with_IBM.ipynb): in it we can distinguish V different sections, that will be described in more detail here in the following.  
 The notebook was originally provided by Udacity, and each section included a list of questions and tasks that have been now completed. The original template also 
@@ -41,11 +41,30 @@ In this case, rank is measured through user-article interactions: the higher the
 As an example of the outcome of this section we can see the **top 7** ranked articles:
 
 <p align="center">
-  <img src="./pictures/ranked-recs-example.png">
+  <img width="850" height="160" src="./pictures/ranked-recs-example.png">
 </p>
 
 ## Sect. III - User-User Based Collaborative Filtering
+The second family of recommendations is based on a _collaborative_ approach, in which we investigate the dataset to identify _similarities_ between users.
 
+* First of all, starting from the `df` dataframe we obtain a user-item matrix in which, for each unique user, we identify the article that they interacted with:
+
+<p align="center">
+  <img width="850" height="160" src="./pictures/user-item-matrix.png">
+</p>
+
+* Then we implement a similarity metric based on the number of seen articles that two users have in common:  the highr that number, the more simialr the users are considered to be.   
+In the notebook there are actually two differnt proposals to measure this kind of similarity: one makes use of the dot product and another of the [cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity).
+
+* Based on the information above it is possible to implement a function that, given an input a `user_id` and a integer `m` is capable of returning the first `m` article read by the users that are the most similar to `user_id`, and that `user_id` has not yet interacted to.
+* This function is than further refined to take into account also the absolute number of interactions that characterizes an article.
+
+As an example of the outcome of this section we can see the **top 10** recommendations for **user 20**:
+
+<p align="center">
+  <img width="850" height="160" src="./pictures/collaborative-recs-example.png">
+</p>
+ 
 
 ## Sect. IV - Content-Based Recommendations (OPTIONAL)
 
