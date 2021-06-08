@@ -59,6 +59,10 @@ The second family of recommendations is based on a _collaborative_ approach, in 
 
 * First of all, starting from the `df` dataframe we obtain a user-item matrix in which, for each unique user, we identify the article that they interacted with:
 
+<!-- <p align="center">
+  <img width="850" height="225" src="./pictures/user-item-matrix.png">
+</p> -->
+
 <p align="center">
   <img width="850" height="225" src="./pictures/user-item-matrix.png">
 </p>
@@ -70,6 +74,10 @@ In the notebook there are actually two differnt proposals to measure this kind o
 * This function is than further refined to take into account also the absolute number of interactions that characterizes an article.
 
 As an example of the outcome of this section we can see the **top 10** recommendations for **user 20**:
+
+<!-- <p align="center">
+  <img width="850" height="255" src="./pictures/collaborative-recs-example.png">
+</p> -->
 
 <p align="center">
   <img width="850" height="255" src="./pictures/collaborative-recs-example.png">
@@ -139,6 +147,10 @@ The same behaviour is visible also in terms of MSE:
 <p align="center">
   <img width="850" height="610" src="./pictures/MSE-vs-latent-factors-train-test.png">
 </p>
+
+<!-- <p align="center">
+  <img width="850" height="610" src="./pictures/MSE-vs-latent-factors-train-test.png">
+</p> -->
 
 We can see how:
 
