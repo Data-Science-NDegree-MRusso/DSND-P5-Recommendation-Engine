@@ -106,7 +106,7 @@ As a final example of recommendation strategies, we can apply decomposition tech
 The outcome of the decomposition leads to a vector of **714 latent features**:
 
 <p align="center">
-  <img width="850" height="170" src="./pictures/svd-outcome.png">
+  <img width="850" height="85" src="./pictures/svd-outcome.png">
 </p>
 
 * In order to verify how many of those features are actually necessary, we can perform an evaluation of the accuracy of the results comparing, for different numbers of latent features, the reconstructed matrix with the actual one, and measuring the difference.  
@@ -128,8 +128,12 @@ To apply a ML-inspired approach we can:
 If we go ahead in doing so, as documented in the notebook, and if we attempt at measuring the accuracy for different numbers of latent features (as done previously, we end up with something like this:
 
 <p align="center">
-  <img width="850" height="570" src="./pictures/accuracy-vs-latent-factors-train-test.png">
+  <img width="850" height="610" src="./pictures/accuracy-vs-latent-factors-train-test.png">
 </p>
 
- 
+The same behaviour is visible also in terms of MSE:
+
+<p align="center">
+  <img width="850" height="610" src="./pictures/MSE-vs-latent-factors-train-test.png">
+</p>
 
