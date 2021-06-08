@@ -6,10 +6,10 @@ The notebook was originally provided by Udacity, and each section included a lis
 included some test functions to be called while progressing, to check on the results.
 
 * [Section I](#sect-i---exploratory-data-analysis)
-* Section II
-* Section III
-* Section IV 
-* Section V
+* [Section II](#sect-ii---rank-based-recommendations)
+* [Section III](#sect-iii---user-user-based-collaborative-filtering)
+* [Section IV](#sect-iv---content-based-recommendations)
+* [Section V](#sect-v---matrix-factorization)
 * Conclusions
 
 ## Sect. I - Exploratory Data Analysis
