@@ -9,7 +9,7 @@ The projecte is completed as a Jupyter notebook available [here](./Recommendatio
 * [Section IV](#sect-iv---content-based-recommendations)
 * [Section V](#sect-v---matrix-factorization)
 
-Finally, a [conclusions](#conclusions) section will summarize overall findings and describe possible next steps. 
+Finally, a [Conclusions](#conclusions) section will summarize overall findings and describe possible next steps. 
 
 ## Sect. I - Exploratory Data Analysis
 The data to work with consist of two different dataframes:
