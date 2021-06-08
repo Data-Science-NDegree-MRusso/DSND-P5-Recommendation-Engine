@@ -46,10 +46,13 @@ In this case, rank is measured through user-article interactions: the higher the
 
 As an example of the outcome of this section we can see the **top 7** ranked articles:
 
-<p align="center">
+<!-- <p align="center">
   <img width="850" height="160" src="./pictures/ranked-recs-example.png">
 </p>
-
+ -->
+<p align="center">
+  <img src="./pictures/ranked-recs-example.png">
+</p>
 
 ## Sect. III - User-User Based Collaborative Filtering
 The second family of recommendations is based on a _collaborative_ approach, in which we investigate the dataset to identify _similarities_ between users.
