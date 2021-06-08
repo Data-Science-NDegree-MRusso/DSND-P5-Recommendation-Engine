@@ -150,7 +150,7 @@ In going through this project we could see a few examples of recommendations eng
 Each strategy has pros and cons, and works better in some circumstances; in general, I think that the most relevant takeaways could be:
  
 * Only some of the methods can be applied in the case of brand new users, with no existing records of interactions. As a matter of a fact, the only implemented solution that would work in that case is the _rank_-based;
-  * However, as I mention in [section IV](#sect-iv---content-based-recommendations), the _content_-based approach could be adapted to work in that case too, leveraging, for example, keywords or example statements provided by the users
+  * However, as I mention in [section IV](#sect-iv---content-based-recommendations), the _content_-based approach could be adapted to work in that case too, leveraging, for example, keywords or example statements provided by the users.
 * The usage of ML strategies to evaluate the quality of the provided suggestions proved out to be quite challenging, given the available data;
   * There is a (very) limited number of users that can be used to test recommendations: this, together with the very sparse nature of the matrices describing the datasets, leads to a very unbalanced prediction model, prone to overfitting.
 
