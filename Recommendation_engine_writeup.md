@@ -88,8 +88,41 @@ As an example of the outcomes in this case we can see the **top 5** recommendati
   <img width="850" height="170" src="./pictures/content-recs-example.png">
 </p>
 
-As a final note, the current implementation of this recommendation strategy would not work for new users: however, a slightly modified approach is thinkable in which users are asked to provide a list of keywords and the NLP pipeline would then look for similarities in the titles. This would work even with no prior interaction from the user.
+As a final note, the current implementation of this recommendation strategy would not work for new users: however, a slightly modified approach is thinkable in which users are asked to provide a list of keywords and the NLP pipeline would then look for similarities in the titles. This would work even with no prior interaction known.
 
 ## Sect. V - Matrix Factorization
+As a final example of recommendation strategies, we can apply decomposition technicques on the `user_item` matrix defined in Part III, and then leverage ML technicques to evaulate the quality of the suggestion we make.
 
+
+### Matrix Decomposition
+* For what concerns the SVD decomposition, in our case we can actually implement the exact closed form as provided by the [`numpy`](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html) library. This is possible because, in our case, the matrix is actually _full_: although sparse, with a prevalence of 0's vs. 1's, we have no `null`, hence there is no need to leverage iterative algorythms like [FunkSVD](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)#Funk_MF).  
+The outcome of the decomposition leads to a vector of **714 latent features**:
+
+<p align="center">
+  <img width="850" height="170" src="./pictures/svd-outcome.png">
+</p>
+
+* In order to verify how many of those features are actually necessary, we can perform an evaluation of the accuracy of the results comparing, for different numbers of latent features, the reconstructed matrix with the actual one, and measuring the difference.  
+We end up with something like this:
+
+<p align="center">
+  <img width="850" height="570" src="./pictures/accuracy-vs-latent-factors.png">
+</p>
+
+* We can see how, already at ~250 features we have an accuracy > 90%.
+
+### ML Approach
+To apply a ML-inspired approach we can:
+
+* Split the `df` dataframe in `train`/`test` portions;
+* Decompose the `train` part according to SVD, and use it to reconstruct example of user/item interactions that will be evaluated against the `test` matrix.
+
+
+If we go ahead in doing so, as documented in the notebook, and if we attempt at measuring the accuracy for different numbers of latent features (as done previously, we end up with something like this:
+
+<p align="center">
+  <img width="850" height="570" src="./pictures/accuracy-vs-latent-factors-train-test.png">
+</p>
+
+ 
 
