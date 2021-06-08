@@ -31,7 +31,7 @@ In this section a few questions are asked in terms of data analysis: number of u
 To get some more insight on the distribution of user-article interactions we can take a look at the histogram:
 
 <p align="center">
-  <img src="./pictures/user-interaction-hist.png">
+  <img alt="user-article interactions" src="./pictures/user-interaction-hist.png">
 </p>
 
 More quantitatively, the analysis showed that:
@@ -46,25 +46,18 @@ In this case, rank is measured through user-article interactions: the higher the
 
 As an example of the outcome of this section we can see the **top 7** ranked articles:
 
-<!-- <p align="center">
-  <img width="850" height="160" src="./pictures/ranked-recs-example.png">
-</p>
- -->
 <p align="center">
-  <img src="./pictures/ranked-recs-example.png">
+  <img alt="rank-based example" width="850" height="160" src="./pictures/ranked-recs-example.png">
 </p>
+
 
 ## Sect. III - User-User Based Collaborative Filtering
 The second family of recommendations is based on a _collaborative_ approach, in which we investigate the dataset to identify _similarities_ between users.
 
 * First of all, starting from the `df` dataframe we obtain a user-item matrix in which, for each unique user, we identify the article that they interacted with:
 
-<!-- <p align="center">
-  <img width="850" height="225" src="./pictures/user-item-matrix.png">
-</p> -->
-
 <p align="center">
-  <img width="850" height="225" src="./pictures/user-item-matrix.png">
+  <img alt="user-item matrix" width="850" height="225" src="./pictures/user-item-matrix.png">
 </p>
 
 * Then we implement a similarity metric based on the number of seen articles that two users have in common:  the higher that number, the more simialr the users are considered to be.   
@@ -75,12 +68,8 @@ In the notebook there are actually two differnt proposals to measure this kind o
 
 As an example of the outcome of this section we can see the **top 10** recommendations for **user 20**:
 
-<!-- <p align="center">
-  <img width="850" height="255" src="./pictures/collaborative-recs-example.png">
-</p> -->
-
 <p align="center">
-  <img width="850" height="255" src="./pictures/collaborative-recs-example.png">
+  <img alt="collaborative-based example" width="850" height="255" src="./pictures/collaborative-recs-example.png">
 </p>
 
 It is worth noting here that this method of generating recommendations cannot be used for brand new users, givrn that in that case there would not be enough information to assess similarity with existing ones.  
@@ -102,7 +91,7 @@ More specifically:
 As an example of the outcomes in this case we can see the **top 5** recommendations that are similar to **article 235**:
 
 <p align="center">
-  <img width="850" height="170" src="./pictures/content-recs-example.png">
+  <img alt="content-based example" width="850" height="170" src="./pictures/content-recs-example.png">
 </p>
 
 As a final note, the current implementation of this recommendation strategy would not work for new users: however, a slightly modified approach is thinkable in which users are asked to provide a list of keywords and the NLP pipeline would then look for similarities in the titles. This would work even with no prior interaction known.
@@ -116,14 +105,14 @@ As a final example of recommendation strategies, we can apply decomposition tech
 The outcome of the decomposition leads to a vector of **714 latent features**:
 
 <p align="center">
-  <img width="850" height="85" src="./pictures/svd-outcome.png">
+  <img alt="svd outcome" width="850" height="85" src="./pictures/svd-outcome.png">
 </p>
 
 * In order to verify how many of those features are actually necessary, we can perform an evaluation of the accuracy of the results comparing, for different numbers of latent features, the reconstructed matrix with the actual one, and measuring the difference.  
 We end up with something like this:
 
 <p align="center">
-  <img width="850" height="570" src="./pictures/accuracy-vs-latent-factors.png">
+  <img alt="accuracy vs. latent factors" width="850" height="570" src="./pictures/accuracy-vs-latent-factors.png">
 </p>
 
 * We can see how, already at ~250 features we have an accuracy > 90%.
@@ -139,18 +128,14 @@ If we go ahead in doing so, as documented in the notebook, we find quickly that 
 Such a low number has an immediate affect on the quality of the predictions we can make. Indeed, if we attempt at measuring the accuracy for different numbers of latent features (as done previously), we obtain something like this:
 
 <p align="center">
-  <img width="850" height="610" src="./pictures/accuracy-vs-latent-factors-train-test.png">
+  <img alt="accuracy vs. latent factors" width="850" height="610" src="./pictures/accuracy-vs-latent-factors-train-test.png">
 </p>
 
 The same behaviour is visible also in terms of MSE:
 
 <p align="center">
-  <img width="850" height="610" src="./pictures/MSE-vs-latent-factors-train-test.png">
+  <img alt="MSE vs. latent factors" width="850" height="610" src="./pictures/MSE-vs-latent-factors-train-test.png">
 </p>
-
-<!-- <p align="center">
-  <img width="850" height="610" src="./pictures/MSE-vs-latent-factors-train-test.png">
-</p> -->
 
 We can see how:
 
