@@ -31,7 +31,7 @@ In this section a few questions are asked in terms of data analysis: number of u
 To get some more insight on the distribution of user-article interactions we can take a look at the histogram:
 
 <p align="center">
-  <img src="./pictures/user-interaction-hist.png">
+  <img alt="user-interaction histogram" src="./pictures/user-interaction-hist.png">
 </p>
 
 More quantitatively, the analysis showed that:
