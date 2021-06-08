@@ -5,7 +5,8 @@
 ## Overview
 This Project is submitted as part of the Udacity Data Science Nanodegree.
 
-For it the target is to analyze the interactions that users have with articles on the [IBM Watson Studio platform](https://www.ibm.com/cloud/watson-studio), and make recommendations to them about new articles we believe they will like. Below you can see an example of what the dashboard could look like displaying articles on the platform:
+For it the target is to analyze the interactions that users have with articles on the [IBM Watson Studio platform](https://www.ibm.com/cloud/watson-studio), and make recommendations to them about new articles we believe they will like.  
+Below you can see an example of what the dashboard could look like when displaying articles on the platform:
 
 <p align="center">
   <img src="./pictures/screenshot-watson.png">
