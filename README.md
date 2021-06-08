@@ -33,7 +33,7 @@ dsnd-proj5        /usr/local/anaconda3/envs/dsnd-proj5
 Further documentation on working with Anaconda environments can be found [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). 
 
 ## Results
-The Jupyter notebook (fairly self-explanatory) is available [here](./Recommendations_with_IBM.ipynb); for the sake of simplicity, the same notebook is also available in [HTML format](./Recommendations_with_IBM.html).  
+The (fairly self-explanatory) Jupyter notebook is available [here](./Recommendations_with_IBM.ipynb); for the sake of simplicity, the same notebook is also available in [HTML format](./Recommendations_with_IBM.html).  
 
 More details on the various sections within the notebook are provided in a separated [writeup](./Recommendation_engine_writeup.md). 
 
