@@ -31,7 +31,7 @@ In this section a few questions are asked in terms of data analysis: number of u
 To get some more insight on the distribution of user-article interactions we can take a look at the histogram:
 
 <p align="center">
-  <img alt="user-article interactions" src="./pictures/user-interaction-hist.png">
+  <img src="./pictures/user-interaction-hist.png">
 </p>
 
 More quantitatively, the analysis showed that:
@@ -57,7 +57,7 @@ The second family of recommendations is based on a _collaborative_ approach, in 
 * First of all, starting from the `df` dataframe we obtain a user-item matrix in which, for each unique user, we identify the article that they interacted with:
 
 <p align="center">
-  <img alt="user-item matrix" width="850" height="225" src="./pictures/user-item-matrix.png">
+  <img width="850" height="225" src="./pictures/user-item-matrix.png">
 </p>
 
 * Then we implement a similarity metric based on the number of seen articles that two users have in common:  the higher that number, the more simialr the users are considered to be.   
