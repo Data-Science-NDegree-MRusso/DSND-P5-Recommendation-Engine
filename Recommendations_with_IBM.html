@@ -17547,7 +17547,7 @@ Titles if the 5 most similar articles : [&#39;Improved Performance for Redis Cac
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><code>Q2.</code> In this situation, you can use Singular Value Decomposition from <a href="https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.linalg.svd.html">numpy</a> on the user-item matrix.  Use the cell to perform SVD, and explain why this is different than in the lesson.</p>
+<p><code>Q2.</code> In this situation, you can use Singular Value Decomposition from <a href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html">numpy</a> on the user-item matrix.  Use the cell to perform SVD, and explain why this is different than in the lesson.</p>
 
 </div>
 </div>
@@ -18698,10 +18698,25 @@ Num. of articles that are present only in the test dataset =  0
 <p><code>A6.</code> From the results above it would seem that there is not much value in increasing the number of latent features beyond a minimum (in this case = 10).</p>
 <p>For what concerns the training data, obviosly the results of the SVD decomposition tend to be exact as the number of features increases, but even at the minimum we have an accuracy of more than 90%.<br>
 On the other hand, for the test datasets the results actually <em>worsen</em> as the number of feature increases (both in terms of accuracy and MSE), suggesting some kind of "overfitting" behaviour.</p>
-<p>In any case, it should be noted how the actual size of the dataset used for this analysis is fairly small, with only 20 users available to compare a prediction with an actual result. If we look at the SVD decomposition results for the full user/item matrix, for example, we can see how the effect of the num. of features is musch more evident, and how we need to consider at least 200 features to have an accuracy &gt; 90%.</p>
-<p>In conclusion, to properly evaluate a prediction strategy making use of model-based collaborative filtering we would need either more data or a better distribution of user between training and test datasets.</p>
+<p>In any case, it should be noted how the actual size of the dataset used for this analysis is fairly small, with only 20 users available to compare a prediction with an actual result.<br>
+As an example of better represetation, if we look at the SVD decomposition results for the full user/item matrix we can see how the effect of the number of features is musch more evident, and how we need to consider at least 200 features to have an accuracy &gt; 90%.</p>
+<p>The point above applies as a general concept to all the recommendation engines: to properly evaluate a prediction strategy we would need either more data or a better distribution of user between training and test datasets.</p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div>
 </body>
 
