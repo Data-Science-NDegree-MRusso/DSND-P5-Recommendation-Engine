@@ -125,7 +125,7 @@ To apply a ML-inspired approach we can:
 * Decompose the `train` part according to SVD, and use it to reconstruct example of user/item interactions that will be evaluated against the `test` matrix.
 
 
-If we go ahead in doing so, as documented in the notebook, and if we attempt at measuring the accuracy for different numbers of latent features (as done previously), we end up with something like this:
+If we go ahead in doing so, as documented in the notebook, and if we attempt at measuring the accuracy for different numbers of latent features (as done previously), we obtain something like this:
 
 <p align="center">
   <img width="850" height="610" src="./pictures/accuracy-vs-latent-factors-train-test.png">
