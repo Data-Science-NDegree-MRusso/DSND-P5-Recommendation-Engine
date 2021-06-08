@@ -14,7 +14,7 @@ Below you can see an example of what the dashboard could look like when displayi
 
 
 ## Requirements
-In order to facilitate the execution of the Notebooks and of the scripts I have prepared an [`environment.yml`](./environment.yml) file to be used to install an environment with [Anaconda](https://www.continuum.io/downloads):
+The exercise is completed as a Jupyter notebook, and in order to facilitate the execution of it  I have prepared an [`environment.yml`](./environment.yml) file to be used to install an environment with [Anaconda](https://www.continuum.io/downloads):
 
 ```sh
 conda env create -f environment.yml
@@ -33,7 +33,7 @@ dsnd-proj5        /usr/local/anaconda3/envs/dsnd-proj5
 Further documentation on working with Anaconda environments can be found [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). 
 
 ## Results
-The exercise is completed as a (fairly self-explanatory) Jupyter notebook available [here](./Recommendations_with_IBM.ipynb); for the sake of simplicity, the same notebook is also available in [HTML format](./Recommendations_with_IBM.html).  
+The Jupyter notebook (fairly self-explanatory) is available [here](./Recommendations_with_IBM.ipynb); for the sake of simplicity, the same notebook is also available in [HTML format](./Recommendations_with_IBM.html).  
 
 More details on the various sections within the notebook are provided in a separated [writeup](./Recommendation_engine_writeup.md). 
 
