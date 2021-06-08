@@ -125,7 +125,8 @@ To apply a ML-inspired approach we can:
 * Decompose the `train` part according to SVD, and use it to reconstruct example of user/item interactions that will be evaluated against the `test` matrix.
 
 
-If we go ahead in doing so, as documented in the notebook, and if we attempt at measuring the accuracy for different numbers of latent features (as done previously), we obtain something like this:
+If we go ahead in doing so, as documented in the notebook, we find quickly that there are **only 20 users** that would be present in both the `train` and `test` datasets.  
+Such a low number has an immediate affect on the quality of the predictions we can make. Indeed, if we attempt at measuring the accuracy for different numbers of latent features (as done previously), we obtain something like this:
 
 <p align="center">
   <img width="850" height="610" src="./pictures/accuracy-vs-latent-factors-train-test.png">
@@ -137,3 +138,11 @@ The same behaviour is visible also in terms of MSE:
   <img width="850" height="610" src="./pictures/MSE-vs-latent-factors-train-test.png">
 </p>
 
+We can see how:
+
+* Considering the training data (i.e. the capability to reconstruct the train data starting from the factorization matrices) we reach a very high accuracy even with just 10 features;
+* Considering the test data (i.e. the capability to actually _predict_ behaviours) we see that the performances actually _worsen_ witht the number of features considered 
+ 
+All of that confirms that the unbalanced data is leading to a form of "overfitting", where we create a model that is extremely close to the train data, but not flexible enough to handle different configurations. 
+
+## Conclusions
