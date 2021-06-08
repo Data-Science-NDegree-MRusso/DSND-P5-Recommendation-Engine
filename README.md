@@ -5,7 +5,7 @@
 ## Overview
 This Project is submitted as part of the Udacity Data Science Nanodegree.
 
-For it the target is to analyze the interactions that users have with articles on the IBM Watson Studio platform, and make recommendations to them about new articles we believe they will like. Below you can see an example of what the dashboard could look like displaying articles on the IBM Watson Platform:
+For it the target is to analyze the interactions that users have with articles on the [IBM Watson Studio platform](https://www.ibm.com/cloud/watson-studio), and make recommendations to them about new articles we believe they will like. Below you can see an example of what the dashboard could look like displaying articles on the platform:
 
 <p align="center">
   <img src="./pictures/screenshot-watson.png">
@@ -33,7 +33,8 @@ Further documentation on working with Anaconda environments can be found [here](
 
 ## Results
 The exercise is completed as a (fairly self-explanatory) Jupyter notebook available [here](./Recommendations_with_IBM.ipynb); for the sake of simplicity, the same notebook is also available in [HTML format](./Recommendations_with_IBM.html).  
-More details on the various sections that the notebook is divided are provided is a separated [writeup](./Recommendation_engine_writeup.md). 
+
+More details on the various sections within the notebook are provided in a separated [writeup](./Recommendation_engine_writeup.md). 
 
 ## License
  <a rel="license" href="https://opensource.org/licenses/MIT"><img alt="MIT License" style="border-width:0" src="https://img.shields.io/badge/License-MIT-yellow.svg?style=plastic" /></a><br />This work is licensed under an <a rel="license" href="https://opensource.org/licenses/MIT">MIT License</a>.
