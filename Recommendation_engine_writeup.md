@@ -5,6 +5,13 @@ The projecte is completed as a Jupyter notebook available [here](./Recommendatio
 The notebook was originally provided by Udacity, and each section included a list of questions and tasks that have been now completed. The original template also 
 included some test functions to be called while progressing, to check on the results.
 
+* Section I
+* Section II
+* Section III
+* Section IV 
+* Section V
+* Conclusions
+
 ## Sect. I - Exploratory Data Analysis
 The data to work with consist of two different dataframes:
 
