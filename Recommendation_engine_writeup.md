@@ -84,9 +84,9 @@ The strategy of recommendation implemented here will be based on _content_: a re
 More specifically: 
 
 * The implemented solution looks for similar **titles** between the totality of the articles and an `article_id` provided as input. 
-* This is powered by an NLTK pipeline that includes a tokenizer, a lemmatizer and a TfIdf vecorizer. 
+* This is powered by an NLT pipeline that includes a tokenizer, a lemmatizer and a [TfIdf vecorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html). 
 * The similarity between TfIdf vectors (corrensponding to titles) is measured through cosine similarity.  
-* All of the above is wrapped in a function that takes in input the `article_id` and an integer `m` and returns the lists of the `m` more similar article id's and titles.
+* All of the above is wrapped in a function that takes in input the `article_id` and an integer `m` and returns the lists of the `m` most similar article ids and titles.
 
 As an example of the outcomes in this case we can see the **top 5** recommendations that are similar to **article 235**:
 
