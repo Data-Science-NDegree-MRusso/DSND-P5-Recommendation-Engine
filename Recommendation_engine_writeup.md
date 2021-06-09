@@ -166,6 +166,13 @@ As a way to move forward, for sure the various strategies could become different
 Another possible approach could be to implement some form of online evaluation of the recommendation engine, using, for example **A/B testing**.  
 Users could be randomly assigned to a web page making use of a specific implementation of a recommendation engine, and their behaviour would be compared with that of a control group running a default page. The groups could be separated based on cookies (to keep track of the session) and some tracking could be done to check whether or not a user would actually interact with one of the suggested articles, i.e. actually follows the suggestions.
 
-Sizing of such a kind of experiment (i.e. deciding how many samples we would need and, consequently, for how long to run it) would depend on the level of practical significance needed and the value of Type I/Type II error rate (alpha/beta) accepted. To support in that assessment one could use, for example, Python libraries like the [`power`](https://www.statsmodels.org/stable/stats.html#power-and-sample-size-calculations) module available as part of the [`statsmodels`](https://www.statsmodels.org/stable/index.html) package.
+The sizing of such a kind of experiment (i.e. deciding how many samples we would need and, consequently, for how long to run it) would depend on the level of practical significance needed and the value of Type I/Type II error rate (alpha/beta) accepted. To support in that assessment one could use, for example, Python libraries like the [`power`](https://www.statsmodels.org/stable/stats.html#power-and-sample-size-calculations) module available as part of the [`statsmodels`](https://www.statsmodels.org/stable/index.html) package.
 
+An example of the output that such libraries would provide can be seen with the last cell of the notebook:
+
+<p align="center">
+  <img alt="sample size calculation" width="850" height="610" src="./pictures/sample-size-calc.png">
+</p>
+
+Wher we can see that, in order to evaluate a change in the average number of users following the suggestions of the recommendation engine from 5% to 10%, with alpha = 5% and beta = 20% (hence test power of 80%) we would need more than **330** users in both the control and experimental group.
 
