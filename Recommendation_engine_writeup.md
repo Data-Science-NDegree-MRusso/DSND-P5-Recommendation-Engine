@@ -97,7 +97,7 @@ As an example of the outcomes in this case we can see the **top 5** recommendati
 As a final note, the current implementation of this recommendation strategy would not work for new users: however, a slightly modified approach is thinkable in which users are asked to provide a list of keywords and the NLP pipeline would then look for similarities in the titles. This would work even with no prior interaction known.
 
 ## Sect. V - Matrix Factorization
-As a final example of recommendation strategies, we can apply decomposition technicques on the `user_item` matrix defined in Part III, and then leverage ML technicques to evaulate the quality of the suggestion we make.
+As a final example of recommendation strategies, we can apply decomposition technicques on the `user_item` matrix defined in [Part III]((#sect-iii---user-user-based-collaborative-filtering)), and then leverage ML technicques to evaulate the quality of the suggestion we make.
 
 
 ### Matrix Decomposition
