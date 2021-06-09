@@ -115,7 +115,7 @@ We end up with something like this:
   <img alt="accuracy vs. latent factors" width="850" height="570" src="./pictures/accuracy-vs-latent-factors.png">
 </p>
 
-* We can see how, already at ~250 features we have an accuracy > 90%.
+* We can see how, already at ~250 features we have an accuracy > 90%. However, this analysis doesn't give insights on how good this decomposition would be in providing _predictions_: for this we'll need next section.
 
 ### ML Approach
 To apply a ML-inspired approach we can:
