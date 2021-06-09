@@ -18766,7 +18766,7 @@ This, together with the very sparse nature of the matrices describing the datase
 <p>Another possible approach could be to implement some form of online evaluation of the recommendation engine, using, for example <strong>A/B testing</strong>.<br>
 Users could be randomly assigned to a web page making use of a specific implementation of a recommendation engine, and their behaviour would be compared with that of a control group running a default page. The groups could be separated based on cookies (to keep track of the session) and some tracking could be done to check whether or not a user would actually interact with one of the suggested articles, i.e. actually follows the suggestions.</p>
 <p>Sizing of such a kind of experiment (i.e. deciding how many samples we would need and, consequently, for how long to run it) would depend on the level of <em>practical</em> significance needed and the value of Type I/Type II error rate ($\alpha$/$\beta$) accepted. To support in that assessment one could use, for example, Python libraries like the <a href="https://www.statsmodels.org/stable/stats.html#power-and-sample-size-calculations"><code>power</code></a> module available as part of the <a href="https://www.statsmodels.org/stable/index.html"><code>statsmodels</code></a> package.</p>
-<p>For example, if we were to evaluate how many observations we need to evaluate a change in the average number of users following the suggestions of the recommendation engine from 5% to 10%, with $\alpha$ = 5% and $\beta$ = 20% we would do something like:</p>
+<p>For example, if we were to evaluate how many observations we need to evaluate a change in the average number of users following the suggestions of the recommendation engine from 5% to 10%, with $\alpha$ = 5% and $\beta$ = 20% (hence a test power of 80%) we would do something like:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -18813,7 +18813,7 @@ Users could be randomly assigned to a web page making use of a specific implemen
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>So we would need more than 330 users to be sampled both in the control and in the experimental group.</p>
+<p>So we would need <strong>more than 330 users</strong> to be sampled both in the control and in the experimental group.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
