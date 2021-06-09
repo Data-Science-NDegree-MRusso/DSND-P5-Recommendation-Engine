@@ -39,6 +39,13 @@ More quantitatively, the analysis showed that:
 * 75% of the users interacted with less than 10 articles;
 * Isolated peaks are possible, with a max of 364 interactions counted from a single user.
 
+Another area where some graphical insight can be provided is around the absolute number of views per article:
+
+<p align="center">
+  <img alt="user-interaction histogram" src="./pictures/articles-views-hist.png">
+</p>
+
+It can be seen how the majority of articles sits below 100 views, with some articles that are more popular.
 
 ## Sect. II - Rank-Based Recommendations
 The first kind of recommendations that we try to provide are based on _rank_: given any user, we can provide them a list of the highest ranked items in our dataset.  
