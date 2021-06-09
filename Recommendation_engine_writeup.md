@@ -174,5 +174,5 @@ An example of the output that such libraries would provide can be seen with the 
   <img alt="sample size calculation" width="850" height="115" src="./pictures/sample-size-calc.png">
 </p>
 
-Wher we can see that, in order to evaluate a change in the average number of users following the suggestions of the recommendation engine from 5% to 10%, with alpha = 5% and beta = 20% (hence test power of 80%) we would need more than **330** users in both the control and experimental group.
+Where we can see that, in order to evaluate a change in the proportion of users following the suggestions of the recommendation engine from (for example) 5% to 10%, with alpha = 5% and beta = 20% (hence test power of 80%) we would need more than **330** users in both the control and experimental group.
 
