@@ -118,7 +118,7 @@ We end up with something like this:
 * We can see how, already at ~250 features we have an accuracy > 90%. However, this analysis doesn't give insights on how good this decomposition would be in providing _predictions_: for this we'll need next section.
 
 ### ML Approach
-To apply a ML-inspired approach we can:
+To apply an ML-inspired approach we can:
 
 * Split the `df` dataframe in `train`/`test` portions;
 * Decompose the `train` part according to SVD, and use it to reconstruct example of user/item interactions that will be evaluated against the `test` matrix.
