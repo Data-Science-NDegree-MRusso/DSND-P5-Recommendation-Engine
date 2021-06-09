@@ -42,7 +42,7 @@ More quantitatively, the analysis showed that:
 Another area where some graphical insight can be provided is around the absolute number of views per article:
 
 <p align="center">
-  <img alt="user-interaction histogram" src="./pictures/articles-views-hist.png">
+  <img alt="articles-views histogram" src="./pictures/articles-views-histogram.png">
 </p>
 
 It can be seen how the majority of articles sits below 100 views, with some articles that are more popular.
