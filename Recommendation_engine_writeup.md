@@ -31,7 +31,7 @@ In this section a few questions are asked in terms of data analysis: number of u
 To get some more insight on the distribution of user-article interactions we can take a look at the histogram:
 
 <p align="center">
-  <img alt="user-interaction histogram" src="./pictures/user-interaction-hist.png">
+  <img alt="user-interaction histogram" width="850" height="570" src="./pictures/user-interaction-histogram.png">
 </p>
 
 More quantitatively, the analysis showed that:
@@ -42,7 +42,7 @@ More quantitatively, the analysis showed that:
 Another area where some graphical insight can be provided is around the absolute number of views per article:
 
 <p align="center">
-  <img alt="articles-views histogram" src="./pictures/articles-views-histogram.png">
+  <img alt="articles-views histogram" width="850" height="570" src="./pictures/articles-views-histogram.png">
 </p>
 
 It can be seen how the majority of articles sits below 100 views, with some articles that are more popular.
