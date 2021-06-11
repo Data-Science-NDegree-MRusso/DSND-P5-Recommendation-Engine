@@ -14,7 +14,7 @@ Below you can see an example of what the dashboard could look like when displayi
 
 
 ## Requirements
-The exercise is completed as a Jupyter notebook, and in order to facilitate the execution of it  I have prepared an [`environment.yml`](./environment.yml) file to be used to install an environment with [Anaconda](https://www.continuum.io/downloads):
+The exercise is completed as a Jupyter notebook, and in order to facilitate the execution of it  I have prepared an [`environment.yml`](./environment.yml) file to be used to install an environment with [Anaconda](https://www.anaconda.com/):
 
 ```sh
 conda env create -f environment.yml
